@@ -15,8 +15,10 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 
-from django.urls import path
+from django.urls import path, include
+from .Modulo1 import Views
 
 urlpatterns = [
-    path('/cbase',),
+    path('api/cbase/',Views.my_view)
+    #path('api/cbase/',Views.my_view),
 ]
