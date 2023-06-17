@@ -12,8 +12,8 @@ def conv(request) :
         base_to=int(contenido.get("base_to"))
         _num=contenido.get("_num")
         _newnum=base(_num,base_from,base_to,string=True)
-        return {"Mensaje":f"Cambiar de base {base_from} a {base_to}","Numero":_newnum}
+        return {"Status":"200","Mensaje":f"Cambiar de base {base_from} a {base_to}","Numero":_newnum}
     except Exception as e:
-        return  {"Mensaje":"Error al cambiar de base , verificar bases"}
+        return  {"Status":"200","Mensaje":"Error al cambiar de base , verificar bases"}
 
     
