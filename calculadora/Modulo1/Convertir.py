@@ -1,6 +1,5 @@
 
 from baseconvert import base
-from math import gcd
 
 
 
