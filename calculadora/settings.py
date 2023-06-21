@@ -29,7 +29,7 @@ ALLOWED_HOSTS = ['localhost', 'geppettoapi.up.railway.app']
 
 
 
-# Application definition
+# Application definition Hola
 
 INSTALLED_APPS = [
     'django.contrib.admin',
