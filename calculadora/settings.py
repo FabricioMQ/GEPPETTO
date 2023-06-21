@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-3%(w*7d+af^)yyd^$n9ut4dwu2tit9%vl+=v^(ik4ts5i&ix_!'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', 'geppettoapi.up.railway.app']
+ALLOWED_HOSTS = ['127.0.0.1', 'geppettoapi.up.railway.app']
 
 
 

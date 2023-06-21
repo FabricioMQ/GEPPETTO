@@ -1,6 +1,4 @@
-
-from baseconvert import base
-
+from .baseconvert.baseconvert import base
 
 
 
