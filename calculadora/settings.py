@@ -25,10 +25,11 @@ SECRET_KEY = 'django-insecure-3%(w*7d+af^)yyd^$n9ut4dwu2tit9%vl+=v^(ik4ts5i&ix_!
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1', 'geppettoapi.up.railway.app']
 
 
-# Application definition
+
+# Application definition Hola
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -124,3 +125,15 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+REST_FRAMEWORK = {
+    'DEFAULT_RENDERER_CLASSES': (
+        'rest_framework.renderers.JSONRenderer',
+    ),
+    'DEFAULT_PARSER_CLASSES': (
+        'rest_framework.parsers.JSONParser',
+    ),
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework.authentication.SessionAuthentication',
+    ),
+}
