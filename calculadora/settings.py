@@ -55,6 +55,13 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'calculadora.urls'
 
+#Agregado 21/06
+CORS_ORIGIN_WHITELIST = [
+    'http://localhost:5173',
+]
+
+CORS_ORIGIN_ALLOW_ALL = True
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
