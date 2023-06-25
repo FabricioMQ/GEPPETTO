@@ -16,9 +16,9 @@ Including another URLconf
 """
 
 from django.urls import path, include
-from .Modulo1 import Views
-
+from .Modulo1 import Views as m1
+from .Modulo2 import Views as m2
 urlpatterns = [
-    path('api/cbase/',Views.my_view)
-    #path('api/cbase/',Views.my_view),
+    path('api/cbase/',m1.my_view),
+    path('api/numbes/',m2.my_view)
 ]
