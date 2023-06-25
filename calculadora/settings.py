@@ -12,8 +12,8 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 from pathlib import Path
 #import del .env
-from decouple import Config
-config = Config()
+from decouple import config
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -26,9 +26,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-3%(w*7d+af^)yyd^$n9ut4dwu2tit9%vl+=v^(ik4ts5i&ix_!'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = config.getboolean('DEBUG')
+DEBUG = config('DEBUG')
 
-ALLOWED_HOSTS = config.get('ALLOWED_HOSTS').split(',')
+ALLOWED_HOSTS = config('ALLOWED_HOSTS').split(',')
 
 
 
@@ -59,7 +59,7 @@ MIDDLEWARE = [
 ROOT_URLCONF = 'calculadora.urls'
 
 #Agregado 21/06
-CORS_ORIGIN_ALLOW_ALL = config.getboolean('CORS_ORIGIN_ALLOW_ALL')
+CORS_ORIGIN_ALLOW_ALL = config('CORS_ORIGIN_ALLOW_ALL' ,cast=bool)
 
 TEMPLATES = [
     {
@@ -113,8 +113,8 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
 
-LANGUAGE_CODE = config.get('LANGUAGE_CODE')
-TIME_ZONE = config.get('TIME_ZONE')
+LANGUAGE_CODE = config('LANGUAGE_CODE')
+TIME_ZONE = config('TIME_ZONE')
 USE_I18N = True
 
 USE_TZ = True
