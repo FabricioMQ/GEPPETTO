@@ -1,7 +1,7 @@
 django==4.2.2
 djangorestframework==3.14.0
 django-cors-headers==4.0.0
-gunicorn
+gunicorn==20.1.0
 sympy==1.12
 antlr4-python3-runtime==4.11.0
 python-decouple==3.8
