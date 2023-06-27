@@ -419,7 +419,7 @@ def fractional_base(fractional_part, input_base=10, output_base=10,
         denominator *= output_base ** i
         digits.append(digit)
         i += 1
-        greatest_common_divisor = gcd(numerator, denominator)
+        greatest_common_divisor = math(numerator, denominator)
         numerator //= greatest_common_divisor
         denominator //= greatest_common_divisor
     return (".",) + tuple(digits)
