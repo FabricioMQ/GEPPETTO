@@ -3,19 +3,19 @@ import wolframalpha
 from decouple import config
 
 def crear_restricciones(request):
-
-    contenido=request.data
-    cifras=contenido.get("cifras")
-    numeros = cifras.split(";")
-    restricciones = []
-    for num in numeros:
-        base = num[num.index('(') + 1:num.index(')')]
-        digitos = num[0:num.index('(')]
-        restricciones.extend(construir_expresiones(digitos, base))
-
-    print(';'.join(restricciones))
-    return wolframalphaSend(';'.join(restricciones))
-
+    try :
+        contenido=request.data
+        cifras=contenido.get("cifras")
+        numeros = cifras.split(";")
+        restricciones = []
+        for num in numeros:
+            base = num[num.index('(') + 1:num.index(')')]
+            digitos = num[0:num.index('(')]
+            restricciones.extend(construir_expresiones(digitos, base))
+        return wolframalphaSend(';'.join(restricciones))
+    except Exception as e:
+       return  {"Status":"false","Mensaje":"Error verificar si son numeros bien escritos"}
+    
 
 def construir_expresiones(elementos, valor):
     expresiones = []
