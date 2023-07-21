@@ -52,7 +52,6 @@ def calcular_incognitas(restricciones, incognitas):
 
 
 def ordenar_valores(incognitas, restricciones):
-    print('order ', incognitas)
     count = 0
     while None in incognitas["valores"] or int(count) <= 0:
         count = count+1
@@ -82,7 +81,3 @@ def ordenar_valores(incognitas, restricciones):
     return incognitas
 
 
-    # Obtener las cifras del usuario
-cifras = input(
-    "Ingrese las cifras bien escritas separadas por punto y coma (;): ")
-crear_restricciones(cifras)
