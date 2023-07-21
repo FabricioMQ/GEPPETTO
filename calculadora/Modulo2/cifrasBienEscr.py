@@ -14,7 +14,7 @@ def crear_restricciones(request):
             restricciones.extend(construir_expresiones(digitos, base))
         return wolframalphaSend(';'.join(restricciones))
     except Exception as e:
-       return  {"Status":"false","Mensaje":"Error verificar si son numeros bien escritos"}
+       return  {"Status":"false","Mensaje":"Error verificar si son numeros bien escritos,comprobar el formato"}
     
 
 def construir_expresiones(elementos, valor):
