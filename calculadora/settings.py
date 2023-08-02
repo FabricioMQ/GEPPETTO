@@ -56,7 +56,7 @@ MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware'
 ]
 
-ROOT_URLCONF = 'calculadora.urls'
+ROOT_URLCONF = 'Calculadora.urls'
 
 #Agregado 21/06
 CORS_ORIGIN_ALLOW_ALL = config('CORS_ORIGIN_ALLOW_ALL' , default=False, cast=bool)
@@ -77,7 +77,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'calculadora.wsgi.application'
+WSGI_APPLICATION = 'Calculadora.wsgi.application'
 
 
 # Database

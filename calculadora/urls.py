@@ -17,6 +17,6 @@ Including another URLconf
 from django.urls import path, include
 
 urlpatterns = [
-    path('api/', include('calculadora.Modulo1.urls')),
-    path('api/', include('calculadora.Modulo2.urls')),
+    path('api/', include('Calculadora.Modulo1.urls')),
+    path('api/', include('Calculadora.Modulo2.urls')),
 ]
