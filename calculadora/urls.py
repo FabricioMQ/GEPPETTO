@@ -14,11 +14,9 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+from django.urls import path, include
 
-from django.urls import path
-from .Modulo1 import Views as m1
-from .Modulo2 import Views as m2
 urlpatterns = [
-    path('api/cbase/',m1.my_view),
-    path('api/numbes/',m2.my_view)
+    path('api/', include('calculadora.Modulo1.urls')),
+    path('api/', include('calculadora.Modulo2.urls')),
 ]

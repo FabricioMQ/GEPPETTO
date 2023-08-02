@@ -5,7 +5,7 @@ from .Convertir import conv
 
 
 @api_view([ 'POST'])
-def my_view(request):
+def ConverView(request):
     methods = {
         'POST':lambda:  conv(request)
     }
