@@ -28,7 +28,7 @@ SECRET_KEY = 'django-insecure-3%(w*7d+af^)yyd^$n9ut4dwu2tit9%vl+=v^(ik4ts5i&ix_!
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG', default=False)
 
-ALLOWED_HOSTS = config('ALLOWED_HOSTS', default='localhost:8000').split(',')
+ALLOWED_HOSTS = config('ALLOWED_HOSTS', default='localhost').split(',')
 
 
 
@@ -56,7 +56,7 @@ MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware'
 ]
 
-ROOT_URLCONF = 'calculadora.urls'
+ROOT_URLCONF = 'Calculadora.urls'
 
 #Agregado 21/06
 CORS_ORIGIN_ALLOW_ALL = config('CORS_ORIGIN_ALLOW_ALL' , default=False, cast=bool)
@@ -77,7 +77,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'calculadora.wsgi.application'
+WSGI_APPLICATION = 'Calculadora.wsgi.application'
 
 
 # Database

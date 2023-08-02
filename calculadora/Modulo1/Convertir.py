@@ -1,7 +1,4 @@
 from .baseconvert.baseconvert import base
-
-
-
 def conv(request) :
     try :
         contenido=request.data
