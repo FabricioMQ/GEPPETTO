@@ -1,6 +1,6 @@
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
-from .Convertir import conv
+from .convertir import conv
 
 
 
