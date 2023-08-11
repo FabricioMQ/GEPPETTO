@@ -9,7 +9,7 @@ def resolver(request) :
        if prompt is None: 
             return  {"Status":"false","Mensaje":"Error al resolver ,el prompt esta nulo"}
        else:    
-            return {"Status":"true","Mensaje":"Problema matematicos sistema numerico","Respuesta":__enviar_prompt__()}
+            return {"Status":"true","Mensaje":"Problema matematicos sistema numerico","Respuesta":__enviar_prompt__(prompt)}
     except Exception as e:
         return  {"Status":"false","Mensaje":"Error al resolver , verificar si los datos cumplen el formato"}
 
@@ -22,7 +22,7 @@ def resolver(request) :
 -frequency_penalty para que no quede en un bucle infinito con el mismo prompt
 -presence_penality para que no siga la conversacion o sacar otros temas
 """
-def __enviar_prompt__(prompt,engine='text-danvici-003',temp=0.5,max_tokens=100,top_p=1,frequency_penalty=0,presence_penalty=0):
+def __enviar_prompt__(prompt,engine='text-davinci-003',temp=0.5,max_tokens=100,top_p=1,frequency_penalty=0,presence_penalty=0):
     respuesta = openai.Completion.create(
                                             engine=engine,
                                             prompt=prompt,
