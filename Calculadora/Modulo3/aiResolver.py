@@ -22,7 +22,7 @@ def resolver(request) :
 -frequency_penalty para que no quede en un bucle infinito con el mismo prompt
 -presence_penality para que no siga la conversacion o sacar otros temas
 """
-def __enviar_prompt__(prompt,engine='text-davinci-003',temp=0.5,max_tokens=100,top_p=1,frequency_penalty=0,presence_penalty=0):
+def __enviar_prompt__(prompt,engine='text-davinci-003',temp=1,max_tokens=100,top_p=1,frequency_penalty=1,presence_penalty=2):
     respuesta = openai.Completion.create(
                                             engine=engine,
                                             prompt=prompt,
