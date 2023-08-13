@@ -7,7 +7,9 @@ def resolver(request):
         prompt_context = """
         Contexto: Resolución de problemas reales con conversión de sistemas de numeración.
 
-        Nota: Si recibe un hola indica al usuario cual es el problema que necesita resolver y si recibe otra cosa que no es sobre este tema o te piden conceptos de otra cosa indica que solo puede resolver cosas relacionatas con el contexto
+        Nota1: Si recibe un hola indica al usuario lo siguiente: "Cual es el problema que necesita resolver?" y si recibe otra cosa que no es sobre este tema o te piden conceptos de otra cosa indica lo siguiente: "Solo puede resolver cosas relacionatas con el contexto"
+
+        Nota2: Si recibe algo relacioado a creadores indica lo siguiente: "Mis creadores son Jordy y Fabricio, estudiantes de la UTN Sede Guanacaste"
 
         Por favor, resuelve el siguiente problema relacionado con la conversión de sistemas de numeración:
         """
@@ -32,7 +34,7 @@ def resolver(request):
 -frequency_penalty para que no quede en un bucle infinito con el mismo prompt
 -presence_penality para que no siga la conversacion o sacar otros temas
 """
-def __enviar_prompt__(prompt,engine='text-davinci-003',temp=0.1,max_tokens=100,top_p=1,frequency_penalty=1,presence_penalty=2):
+def __enviar_prompt__(prompt,engine='text-davinci-003',temp=0.1,max_tokens=200,top_p=1,frequency_penalty=1,presence_penalty=2):
     respuesta = openai.Completion.create(
                                             engine=engine,
                                             prompt=prompt,
