@@ -23,7 +23,6 @@ def __construir_expresiones__(elementos, valor):
     for elemento in elementos:
         if elemento.isalpha() and elemento.isupper(): 
            elemento=base(elemento,36,10,string=True)
-           
         if elemento.isalpha() or valor.isalpha():
           expresion = f"{elemento}<{valor}"
           expresiones.append(expresion)
